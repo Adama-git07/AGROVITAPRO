@@ -1,36 +1,106 @@
 <!DOCTYPE html>
+<!-- Ceci indique que c’est un document HTML5 -->
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Farm Agro Vita</title>
+    <!-- Paramètres de base du site -->
+    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Rend le site responsive -->
+    <title>Farm Agro Vita S.A - Nourrir le Monde avec Qualité</title> <!-- Titre affiché dans l’onglet du navigateur -->
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
 </head>
 <body>
 
-    <!-- Menu de navigation -->
-    <h1>Farm Agro Vita</h1>
-    <nav>
-        <a href="#">Accueil</a> |
-        <a href="#">Produits</a> |
-        <a href="#">Contact</a>
-    </nav>
+    <!-- En-tête de la page avec navigation -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="#" class="logo">Farm Agro Vita S.A</a> <!-- Logo/nom du site -->
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li> <!-- Lien vers la section Accueil -->
+                <li><a href="#mission">Mission</a></li> <!-- Lien vers la section Mission -->
+                <li><a href="#contact">Contact</a></li> <!-- Lien vers la section Contact -->
+            </ul>
+        </nav>
+    </header>
 
-    <hr>
+    <!-- Section principale avec images défilantes -->
+    <section class="hero" id="accueil">
+        <div class="slideshow-container">
+            <!-- Trois images de fond qui changent automatiquement -->
+            <div class="slide active" style="background-image: url('...');"></div>
+            <div class="slide" style="background-image: url('...');"></div>
+            <div class="slide" style="background-image: url('...');"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Farm Agro Vita S.A</h1> <!-- Grand titre -->
+            <p>Nourrir le monde avec des ingrédients de haute qualité...</p> <!-- Sous-titre -->
+            <a href="#mission" class="cta-button">Découvrir Notre Mission</a> <!-- Bouton qui descend à la section Mission -->
+        </div>
+    </section>
 
-    <!-- Message de bienvenue -->
-    <h2>Bienvenue chez Farm Agro Vita</h2>
-    <p>Produits frais, locaux et durables — directement de notre ferme à votre assiette.</p>
+    <!-- Section Mission de l'entreprise -->
+    <section class="mission" id="mission">
+        <div class="container">
+            <h2 class="section-title">Notre Mission</h2> <!-- Titre de section -->
+            <div class="mission-content">
+                <!-- Le contenu de la mission sera ajouté ici plus tard -->
+            </div>
+        </div>
+    </section>
 
-    <hr>
+    <!-- Section pour contacter l'entreprise -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Contactez-Nous</h2>
+            <div class="contact-content">
+                
+                <!-- Informations de contact (adresse, téléphone...) -->
+                <div class="contact-info">
+                    <h3>Informations de Contact</h3>
+                    <!-- À remplir plus tard -->
 
-    <!-- Produits -->
-    <h3>Nos produits phares</h3>
+                    <h3 style="margin-top: 2rem;">Heures d'Ouverture</h3>
+                    <!-- À remplir plus tard -->
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form">
+                    <h3>Envoyez-nous un Message</h3>
+                    <form id="contactForm">
+                        <!-- Champ Nom -->
+                        <div class="form-group">
+                            <label for="name">Nom</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <!-- Champ Email -->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <!-- Champ Sujet -->
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <!-- Champ Message -->
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <!-- Bouton d'envoi -->
+                        <button type="submit" class="submit-btn">Envoyer le Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- Pied de page -->
-    <footer>
-        <p>&copy; 2025 Farm Agro Vita - Tous droits réservés</p>
+    <footer class="footer">
+        <p>&copy; 2025 Farm Agro Vita S.A. Tous droits réservés. | Nourrir le monde avec qualité et durabilité.</p>
     </footer>
 
+    <!-- Lien vers le fichier JavaScript (facultatif si tu n’en as pas besoin) -->
+    <script src="script.js"></script>
 </body>
 </html>
