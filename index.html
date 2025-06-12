@@ -1,106 +1,148 @@
 <!DOCTYPE html>
-<!-- Ceci indique que c’est un document HTML5 -->
 <html lang="fr">
 <head>
-    <!-- Paramètres de base du site -->
-    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Rend le site responsive -->
-    <title>Farm Agro Vita S.A - Nourrir le Monde avec Qualité</title> <!-- Titre affiché dans l’onglet du navigateur -->
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Agro Vita - Produits agricoles premium</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- En-tête de la page avec navigation -->
     <header class="header" id="header">
         <nav class="nav">
-            <a href="#" class="logo">Farm Agro Vita S.A</a> <!-- Logo/nom du site -->
+            <a href="#" class="logo">Farm Agro Vita</a>
             <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li> <!-- Lien vers la section Accueil -->
-                <li><a href="#mission">Mission</a></li> <!-- Lien vers la section Mission -->
-                <li><a href="#contact">Contact</a></li> <!-- Lien vers la section Contact -->
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#produits">Produits</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Section principale avec images défilantes -->
     <section class="hero" id="accueil">
-        <div class="slideshow-container">
-            <!-- Trois images de fond qui changent automatiquement -->
-            <div class="slide active" style="background-image: url('...');"></div>
-            <div class="slide" style="background-image: url('...');"></div>
-            <div class="slide" style="background-image: url('...');"></div>
+        <div class="video-banner">
+            <video autoplay muted loop playsinline>
+                <source src="Banniere-Farm-Agro-Vita.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de cette vidéo.
+            </video>
         </div>
         <div class="hero-content">
-            <h1>Farm Agro Vita S.A</h1> <!-- Grand titre -->
-            <p>Nourrir le monde avec des ingrédients de haute qualité...</p> <!-- Sous-titre -->
-            <a href="#mission" class="cta-button">Découvrir Notre Mission</a> <!-- Bouton qui descend à la section Mission -->
+            <h1>Bienvenue chez Farm Agro Vita</h1>
+            <p>L’excellence au service de la qualité.</p>
+            <p>Chez Farm Agro Vita, la qualité n’est pas un simple standard — c’est notre identité. Nous sommes déterminés à produire les meilleurs produits laitiers, viandes, œufs et produits agricoles grâce à une sélection génétique de premier plan, une alimentation de qualité supérieure et un contrôle rigoureux de chaque étape de production. Chaque produit que nous livrons reflète notre engagement envers la pureté, la fraîcheur et l’excellence.</p>
+            <blockquote>« La quête de qualité définit qui nous sommes. »</blockquote>
+            <a href="#mission" class="cta-button">Découvrir Notre Mission</a>
         </div>
     </section>
 
-    <!-- Section Mission de l'entreprise -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">À propos de nous</h2>
+            <h3>Qui sommes-nous</h3>
+            <p>Farm Agro Vita a été fondé avec un objectif clair : offrir des produits d’une qualité exceptionnelle au Sénégal, en Afrique de l’Ouest et sur des marchés internationaux ciblés. Nous allions science moderne, agriculture de précision et gestion responsable pour créer une ferme totalement intégrée où chaque détail vise un niveau de qualité premium.</p>
+            <ul>
+                <li>Sélection génétique supérieure et rigoureuse</li>
+                <li>Importation directe de bétail des Pays-Bas</li>
+                <li>Programmes d’alimentation haut de gamme</li>
+                <li>Environnements de production contrôlés</li>
+                <li>Contrôle qualité rigoureux et traçabilité complète</li>
+            </ul>
+        </div>
+    </section>
+
     <section class="mission" id="mission">
         <div class="container">
-            <h2 class="section-title">Notre Mission</h2> <!-- Titre de section -->
-            <div class="mission-content">
-                <!-- Le contenu de la mission sera ajouté ici plus tard -->
-            </div>
+            <h2 class="section-title">Notre Mission</h2>
+            <p>Offrir des produits agricoles de la plus haute qualité tout en construisant un écosystème alimentaire durable et résilient.</p>
+            <h3>Notre vision</h3>
+            <p>Devenir la référence ouest-africaine de l’excellence agroalimentaire en lait, viande, volaille et produits agricoles premium.</p>
+            <h3>Nos valeurs</h3>
+            <ul>
+                <li>Qualité sans compromis</li>
+                <li>Innovation</li>
+                <li>Durabilité</li>
+                <li>Intégrité</li>
+                <li>Responsabilité sociale</li>
+            </ul>
         </div>
     </section>
 
-    <!-- Section pour contacter l'entreprise -->
+    <section class="products" id="produits">
+        <div class="container">
+            <h2 class="section-title">Nos Produits</h2>
+
+            <h3>Produits laitiers premium — La pureté dans chaque goutte</h3>
+            <p>Nos races laitières Holstein, Jersey et spécialisées sont soigneusement importées des Pays-Bas. Elles offrent des rendements supérieurs et une richesse nutritionnelle exceptionnelle, idéales pour la consommation, les yaourts, les fromages et les crèmes.</p>
+            <ul>
+                <li>Lait ultra-frais</li>
+                <li>Yaourt grec artisanal</li>
+                <li>Beurre & crème fermiers</li>
+                <li>Fromages de qualité supérieure</li>
+            </ul>
+
+            <h3>Viande d’exception — Marbrage et goût supérieurs</h3>
+            <p>Grâce à des génétiques premium (Angus, Fleckvieh, Simmental) et une alimentation haut de gamme, nous produisons des viandes marbrées, tendres et savoureuses, proches de la qualité Kobe.</p>
+            <ul>
+                <li>Tendreté exceptionnelle</li>
+                <li>S saveur riche et beurrée</li>
+                <li>Marbrage élevé</li>
+                <li>Qualité gustative constante</li>
+            </ul>
+
+            <h3>Volaille et œufs frais — Une qualité naturelle</h3>
+            <ul>
+                <li>Fraîcheur quotidienne</li>
+                <li>Nutrition saine et équilibrée</li>
+                <li>Taille et poids réguliers</li>
+                <li>Œufs frais de qualité A</li>
+                <li>Œufs biologiques & Omega-3</li>
+                <li>Poulets de chair tendres</li>
+            </ul>
+        </div>
+    </section>
+
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title" style="color: white;">Contactez-Nous</h2>
+            <h2 class="section-title">Contactez-Nous</h2>
             <div class="contact-content">
-                
-                <!-- Informations de contact (adresse, téléphone...) -->
                 <div class="contact-info">
                     <h3>Informations de Contact</h3>
-                    <!-- À remplir plus tard -->
-
-                    <h3 style="margin-top: 2rem;">Heures d'Ouverture</h3>
-                    <!-- À remplir plus tard -->
+                    <p><strong>Adresse :</strong> Pointe E Immeuble X 9ième Étage Dakar, Sénégal</p>
+                    <p><strong>Téléphone :</strong> +221 78-868-9324</p>
+                    <p><strong>Email :</strong> Contact@farmagrovita.com</p>
                 </div>
 
-                <!-- Formulaire de contact -->
                 <div class="contact-form">
                     <h3>Envoyez-nous un Message</h3>
                     <form id="contactForm">
-                        <!-- Champ Nom -->
                         <div class="form-group">
                             <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
                         </div>
-                        <!-- Champ Email -->
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="Votre email" required>
                         </div>
-                        <!-- Champ Sujet -->
                         <div class="form-group">
                             <label for="subject">Sujet</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <input type="text" id="subject" name="subject" placeholder="Sujet du message" required>
                         </div>
-                        <!-- Champ Message -->
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
                         </div>
-                        <!-- Bouton d'envoi -->
                         <button type="submit" class="submit-btn">Envoyer le Message</button>
                     </form>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Pied de page -->
     <footer class="footer">
-        <p>&copy; 2025 Farm Agro Vita S.A. Tous droits réservés. | Nourrir le monde avec qualité et durabilité.</p>
+        <p>&copy; 2025 Farm Agro Vita. Produire des produits de qualité supérieure — sans compromis.</p>
     </footer>
 
-    <!-- Lien vers le fichier JavaScript (facultatif si tu n’en as pas besoin) -->
     <script src="script.js"></script>
 </body>
 </html>
