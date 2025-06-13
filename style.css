@@ -1,12 +1,15 @@
 /* ===============================
    STYLES GÉNÉRAUX
-================================ */
+   ============================== */
+
+/* Supprime les marges/paddings par défaut et permet un meilleur calcul des tailles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Style général du corps du site */
 body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
@@ -14,12 +17,14 @@ body {
     background-color: #ffffff;
 }
 
+/* Style des listes non ordonnées */
 ul {
     padding-left: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
 
+/* Style des citations (blockquotes) */
 blockquote {
     font-style: italic;
     color: #00592e;
@@ -29,13 +34,16 @@ blockquote {
     background: #f4f4f4;
 }
 
+/* Couleur des titres principaux */
 h1, h2, h3 {
     color: #00592e;
 }
 
 /* ===============================
    NAVIGATION
-================================ */
+   ============================== */
+
+/* La barre de navigation est fixe en haut de l'écran */
 .header {
     position: fixed;
     top: 0;
@@ -45,6 +53,7 @@ h1, h2, h3 {
     transition: all 0.3s ease;
 }
 
+/* Conteneur de la navigation */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -54,6 +63,7 @@ h1, h2, h3 {
     margin: 0 auto;
 }
 
+/* Logo dans la barre de navigation */
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -61,12 +71,14 @@ h1, h2, h3 {
     text-decoration: none;
 }
 
+/* Liens de navigation */
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
+/* Style des liens */
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -74,13 +86,16 @@ h1, h2, h3 {
     transition: color 0.3s ease;
 }
 
+/* Effet au survol des liens */
 .nav-links a:hover {
     color: #aad5c1;
 }
 
 /* ===============================
    ACCUEIL AVEC VIDÉO
-================================ */
+   ============================== */
+
+/* Section héros (accueil avec vidéo) */
 .hero {
     position: relative;
     height: 100vh;
@@ -91,6 +106,7 @@ h1, h2, h3 {
     justify-content: center;
 }
 
+/* Voile semi-transparent par-dessus la vidéo */
 .hero::before {
     content: '';
     position: absolute;
@@ -101,6 +117,7 @@ h1, h2, h3 {
     z-index: 0;
 }
 
+/* Conteneur de la vidéo */
 .video-banner {
     position: absolute;
     top: 0;
@@ -111,12 +128,14 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
+/* Vidéo plein écran avec couverture complète */
 .video-banner video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Contenu texte centré par-dessus la vidéo */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -126,17 +145,20 @@ h1, h2, h3 {
     max-width: 900px;
 }
 
+/* Titre principal de la section héro */
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
+/* Texte descriptif */
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
+/* Bouton d'appel à l'action */
 .cta-button {
     display: inline-block;
     background-color: #ffffff;
@@ -150,6 +172,7 @@ h1, h2, h3 {
     border: 2px solid #ffffff;
 }
 
+/* Style du bouton au survol */
 .cta-button:hover {
     background: #aad5c1;
     color: #003f20;
@@ -158,13 +181,16 @@ h1, h2, h3 {
 
 /* ===============================
    SECTIONS GÉNÉRALES
-================================ */
+   ============================== */
+
+/* Conteneur commun à toutes les sections */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 5rem 5% 3rem;
 }
 
+/* Titre de section centré avec ligne décorative */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -184,25 +210,50 @@ h1, h2, h3 {
     background: #00592e;
 }
 
-.about, .mission, .products {
+/* Fond blanc et padding pour chaque section */
+.about, .mission, .products, .model {
     background-color: #ffffff;
     padding: 5rem 0;
 }
 
-.products h3 {
+/* Titres des sous-sections */
+.products h3, .model h3 {
     margin-top: 2rem;
     color: #00592e;
 }
 
 /* ===============================
+   IMAGES (FIGURES)
+   ============================== */
+
+/* Centrage des images */
+figure {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Style des images : taille, coins arrondis, ombre */
+figure img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===============================
    CONTACT
-================================ */
+   ============================== */
+
+/* Fond gris clair pour la section contact */
 .contact {
     background-color: #f1f1f1;
     color: #00592e;
     padding: 5rem 0;
 }
 
+/* Mise en colonnes responsive pour contact */
 .contact-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -210,6 +261,7 @@ h1, h2, h3 {
     margin-top: 2rem;
 }
 
+/* Formulaire stylé avec fond blanc et bord arrondi */
 .contact-form {
     background: white;
     padding: 2rem;
@@ -217,10 +269,12 @@ h1, h2, h3 {
     border: 1px solid #ccc;
 }
 
+/* Espace entre chaque champ du formulaire */
 .form-group {
     margin-bottom: 1.2rem;
 }
 
+/* Labels en gras et verts */
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
@@ -228,6 +282,7 @@ h1, h2, h3 {
     color: #00592e;
 }
 
+/* Champs de saisie stylisés */
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -239,11 +294,13 @@ h1, h2, h3 {
     color: #333;
 }
 
+/* Zone de message plus haute */
 .form-group textarea {
     height: 120px;
     resize: vertical;
 }
 
+/* Bouton de soumission du formulaire */
 .submit-btn {
     background: #00592e;
     color: white;
@@ -256,13 +313,16 @@ h1, h2, h3 {
     transition: all 0.3s ease;
 }
 
+/* Bouton survolé */
 .submit-btn:hover {
     background: #004020;
 }
 
 /* ===============================
    PIED DE PAGE
-================================ */
+   ============================== */
+
+/* Pied de page vert foncé avec texte blanc */
 .footer {
     background: #00592e;
     color: white;
@@ -272,16 +332,26 @@ h1, h2, h3 {
 }
 
 /* ===============================
-   RESPONSIVE
-================================ */
+   RESPONSIVE (mobiles)
+   ============================== */
+
 @media (max-width: 768px) {
+    /* Cache les liens de navigation sur petits écrans */
     .nav-links {
         display: none;
     }
 
+    /* Réduit la taille des titres */
     .hero h1 {
         font-size: 2rem;
     }
 
     .hero p {
         font-size: 1rem;
+    }
+
+    /* Diminue la hauteur des images sur mobile */
+    figure img {
+        max-height: 250px;
+    }
+}
