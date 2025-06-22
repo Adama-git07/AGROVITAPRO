@@ -1,15 +1,13 @@
 /* ===============================
    STYLES GÉNÉRAUX
-   ============================== */
-
-/* Supprime les marges/paddings par défaut et permet un meilleur calcul des tailles */
+   Réinitialisation de base + typographie
+================================ */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Inclut les bordures et paddings dans la taille */
 }
 
-/* Style général du corps du site */
 body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
@@ -17,85 +15,79 @@ body {
     background-color: #ffffff;
 }
 
-/* Style des listes non ordonnées */
+/* Style général des listes */
 ul {
     padding-left: 1.5rem;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Style des citations (blockquotes) */
-blockquote {
-    font-style: italic;
-    color: #00592e;
-    margin: 1rem 0;
-    padding-left: 1rem;
-    border-left: 4px solid #00592e;
-    background: #f4f4f4;
-}
-
-/* Couleur des titres principaux */
+/* Couleur des titres */
 h1, h2, h3 {
     color: #00592e;
 }
 
 /* ===============================
    NAVIGATION
-   ============================== */
-
-/* La barre de navigation est fixe en haut de l'écran */
+   Barre en haut fixe avec effet flou
+================================ */
 .header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #00592e;
+    height: 50px;
+    background: rgba(0, 89, 46, 0.95); /* vert avec opacité */
+    backdrop-filter: blur(6px); /* flou au scroll */
+    -webkit-backdrop-filter: blur(6px); /* support Safari */
     z-index: 1000;
     transition: all 0.3s ease;
 }
 
-/* Conteneur de la navigation */
+/* Conteneur du menu */
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0 5%;
     max-width: 1200px;
     margin: 0 auto;
+    height: 100%;
 }
 
-/* Logo dans la barre de navigation */
+/* Logo */
 .logo {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 /* Liens de navigation */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-/* Style des liens */
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
-/* Effet au survol des liens */
 .nav-links a:hover {
-    color: #aad5c1;
+    color: #aad5c1; /* couleur au survol */
 }
 
 /* ===============================
-   ACCUEIL AVEC VIDÉO
-   ============================== */
-
-/* Section héros (accueil avec vidéo) */
+   ACCUEIL VIDÉO
+   Bannière vidéo avec texte centré
+================================ */
 .hero {
     position: relative;
     height: 100vh;
@@ -104,17 +96,6 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Voile semi-transparent par-dessus la vidéo */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 89, 46, 0.6);
-    z-index: 0;
 }
 
 /* Conteneur de la vidéo */
@@ -128,14 +109,14 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
-/* Vidéo plein écran avec couverture complète */
+/* La vidéo remplit toute la section */
 .video-banner video {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Contenu texte centré par-dessus la vidéo */
+/* Contenu par-dessus la vidéo */
 .hero-content {
     position: relative;
     z-index: 1;
@@ -145,20 +126,12 @@ h1, h2, h3 {
     max-width: 900px;
 }
 
-/* Titre principal de la section héro */
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
-
-/* Texte descriptif */
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
-/* Bouton d'appel à l'action */
+/* Bouton principal */
 .cta-button {
     display: inline-block;
     background-color: #ffffff;
@@ -172,7 +145,6 @@ h1, h2, h3 {
     border: 2px solid #ffffff;
 }
 
-/* Style du bouton au survol */
 .cta-button:hover {
     background: #aad5c1;
     color: #003f20;
@@ -180,80 +152,117 @@ h1, h2, h3 {
 }
 
 /* ===============================
-   SECTIONS GÉNÉRALES
-   ============================== */
-
-/* Conteneur commun à toutes les sections */
+   CONTAINER & SECTIONS
+   Gestion des marges globales
+================================ */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 5rem 5% 3rem;
+    padding: 2rem 5%; /* Espacement réduit pour sections rapprochées */
 }
 
-/* Titre de section centré avec ligne décorative */
+/* Titre centré avec barre dessous */
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     color: #00592e;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     position: relative;
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
+    bottom: -6px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 60px;
     height: 3px;
     background: #00592e;
 }
 
-/* Fond blanc et padding pour chaque section */
-.about, .mission, .products, .model {
+/* Espacement vertical des sections */
+.about, .mission, .products, .modele, .contact {
     background-color: #ffffff;
-    padding: 5rem 0;
+    padding: 2rem 0;
 }
 
-/* Titres des sous-sections */
-.products h3, .model h3 {
-    margin-top: 2rem;
+/* Titres internes dans les sections produits et modèle */
+.products h3, .modele h3 {
+    margin-top: 1.5rem;
     color: #00592e;
 }
 
 /* ===============================
-   IMAGES (FIGURES)
-   ============================== */
-
-/* Centrage des images */
-figure {
-    text-align: center;
-    margin: 2rem 0;
+   IMAGE + TEXTE : MISSION
+   Une image à gauche, texte à droite
+================================ */
+.image-text-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
 }
 
-/* Style des images : taille, coins arrondis, ombre */
-figure img {
-    max-width: 100%;
-    height: auto;
+.image-text-row figure {
+    flex: 1 1 300px;
+    margin: 0;
+}
+
+.image-text-row img {
+    width: 100%;
     max-height: 400px;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ===============================
-   CONTACT
-   ============================== */
-
-/* Fond gris clair pour la section contact */
-.contact {
-    background-color: #f1f1f1;
-    color: #00592e;
-    padding: 5rem 0;
+.text-block {
+    flex: 2;
+    min-width: 250px;
 }
 
-/* Mise en colonnes responsive pour contact */
+/* ===============================
+   PRODUITS : IMAGES CÔTE À CÔTE
+================================ */
+.product-block {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.product-block figure {
+    flex: 1 1 300px;
+    margin: 0;
+}
+
+.product-block img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Description centrée sous les images */
+.product-description {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.product-description ul {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===============================
+   CONTACT : formulaire et infos
+================================ */
 .contact-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -261,7 +270,6 @@ figure img {
     margin-top: 2rem;
 }
 
-/* Formulaire stylé avec fond blanc et bord arrondi */
 .contact-form {
     background: white;
     padding: 2rem;
@@ -269,12 +277,11 @@ figure img {
     border: 1px solid #ccc;
 }
 
-/* Espace entre chaque champ du formulaire */
+/* Champs du formulaire */
 .form-group {
     margin-bottom: 1.2rem;
 }
 
-/* Labels en gras et verts */
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
@@ -282,7 +289,6 @@ figure img {
     color: #00592e;
 }
 
-/* Champs de saisie stylisés */
 .form-group input,
 .form-group textarea {
     width: 100%;
@@ -294,13 +300,13 @@ figure img {
     color: #333;
 }
 
-/* Zone de message plus haute */
+/* Zone de texte du message */
 .form-group textarea {
     height: 120px;
     resize: vertical;
 }
 
-/* Bouton de soumission du formulaire */
+/* Bouton envoyer */
 .submit-btn {
     background: #00592e;
     color: white;
@@ -313,16 +319,14 @@ figure img {
     transition: all 0.3s ease;
 }
 
-/* Bouton survolé */
 .submit-btn:hover {
     background: #004020;
 }
 
 /* ===============================
    PIED DE PAGE
-   ============================== */
-
-/* Pied de page vert foncé avec texte blanc */
+   Texte simple centré
+================================ */
 .footer {
     background: #00592e;
     color: white;
@@ -332,26 +336,33 @@ figure img {
 }
 
 /* ===============================
-   RESPONSIVE (mobiles)
-   ============================== */
-
+   RESPONSIVE DESIGN
+   Pour écrans mobiles (max 768px)
+================================ */
 @media (max-width: 768px) {
-    /* Cache les liens de navigation sur petits écrans */
+    /* Cacher le menu horizontal */
     .nav-links {
         display: none;
-    }
-
-    /* Réduit la taille des titres */
-    .hero h1 {
-        font-size: 2rem;
     }
 
     .hero p {
         font-size: 1rem;
     }
 
-    /* Diminue la hauteur des images sur mobile */
-    figure img {
+    /* Empiler les éléments verticalement */
+    .image-text-row,
+    .product-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-description {
+        text-align: center;
+    }
+
+    /* Hauteur réduite des images */
+    .image-text-row img,
+    .product-block img {
         max-height: 250px;
     }
 }

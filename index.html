@@ -1,200 +1,248 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farm Agro Vita - Produits agricoles premium</title>
-    <!-- Lien vers la feuille de style CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Déclaration du charset et paramétrage du responsive -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Titre de la page -->
+  <title>Farm Agro Vita - Produits agricoles premium</title>
+
+  <!-- Lien vers le fichier CSS externe -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- En-tête avec navigation -->
-    <header class="header" id="header">
-        <nav class="nav">
-            <a href="#" class="logo">Farm Agro Vita</a>
-            <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#mission">Mission</a></li>
-                <li><a href="#produits">Produits</a></li>
-                <li><a href="#modele">Notre modèle</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Section d'accueil avec vidéo de fond -->
-    <section class="hero" id="accueil">
-        <div class="video-banner">
-            <video autoplay muted loop playsinline>
-                <source src="Banniere-Farm-Agro-Vita.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de cette vidéo.
-            </video>
-        </div>
-        <div class="hero-content">
-            <h1>Bienvenue chez Farm Agro Vita</h1>
-            <p>L’excellence au service de la qualité.</p>
-            <p>Chez Farm Agro Vita, la qualité n’est pas un simple standard — c’est notre identité...</p>
-            <blockquote>« La quête de qualité définit qui nous sommes. »</blockquote>
-            <a href="#mission" class="cta-button">Découvrir Notre Mission</a>
-        </div>
-    </section>
+  <!-- ===== En-tête : barre de navigation ===== -->
+  <header class="header" id="header">
+    <nav class="nav">
+      <!-- Logo cliquable -->
+      <a href="#" class="logo">Farm Agro Vita</a>
 
-    <!-- Section À propos -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">À propos de nous</h2>
-            <p>Farm Agro Vita a été fondé avec un objectif clair : offrir des produits d’une qualité exceptionnelle...</p>
-            <ul>
-                <li>Sélection génétique supérieure et rigoureuse</li>
-                <li>Importation directe de bétail des Pays-Bas</li>
-                <li>Programmes d’alimentation haut de gamme</li>
-                <li>Environnements de production contrôlés</li>
-                <li>Contrôle qualité rigoureux et traçabilité complète</li>
-            </ul>
-        </div>
-    </section>
+      <!-- Liens de navigation vers les sections de la page -->
+      <ul class="nav-links">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#produits">Produits</a></li>
+        <li><a href="#modele">Notre modèle</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Section Mission -->
-    <section class="mission" id="mission">
-        <div class="container">
-            <h2 class="section-title">Notre Mission</h2>
-            <p>Offrir des produits agricoles de la plus haute qualité...</p>
-            <ul>
-                <li>Qualité sans compromis</li>
-                <li>Innovation</li>
-                <li>Durabilité</li>
-                <li>Intégrité</li>
-                <li>Responsabilité sociale</li>
-            </ul>
-        </div>
-        <!-- Image mission -->
+  <!-- ===== Section d'accueil avec vidéo de fond ===== -->
+  <section class="hero" id="accueil">
+    <div class="video-banner">
+      <!-- Vidéo d'arrière-plan en boucle -->
+      <video autoplay muted loop playsinline>
+        <source src="Banniere-Farm-Agro-Vita.mp4" type="video/mp4" />
+        Votre navigateur ne supporte pas la lecture de cette vidéo.
+      </video>
+    </div>
+    <div class="hero-content">
+      <!-- Message et bouton d'appel à l'action -->
+      <p>L’excellence au service de la qualité.</p>
+      <a href="#mission" class="cta-button">Découvrir Notre Mission</a>
+    </div>
+  </section>
+
+  <!-- ===== Section À propos ===== -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">À propos de nous</h2>
+      <!-- Présentation de l'entreprise -->
+      <p>Farm Agro Vita a été fondé avec un objectif clair : offrir des produits d’une qualité exceptionnelle...</p>
+      <!-- Liste des engagements -->
+      <ul>
+        <li>Sélection génétique supérieure et rigoureuse</li>
+        <li>Importation directe de bétail des Pays-Bas</li>
+        <li>Programmes d’alimentation haut de gamme</li>
+        <li>Environnements de production contrôlés</li>
+        <li>Contrôle qualité rigoureux et traçabilité complète</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Section Mission ===== -->
+  <section class="mission" id="mission">
+    <div class="container">
+      <h2 class="section-title">Notre Mission</h2>
+      <div class="product-block">
+        <!-- Image à gauche -->
         <figure>
-            <img src="ImageVachejpg.jpg" alt="Veau nourri par sa mère">
+          <img src="ImageVachejpg.jpg" alt="Veau nourri par sa mère" />
         </figure>
-    </section>
-
-    <!-- Section Produits -->
-    <section class="products" id="produits">
-        <div class="container">
-            <h2 class="section-title">Nos Produits</h2>
-
-            <!-- Produits laitiers -->
-            <h3>Produits laitiers premium</h3>
-            <ul>
-                <li>Lait ultra-frais</li>
-                <li>Yaourt grec artisanal</li>
-                <li>Beurre & crème fermiers</li>
-                <li>Fromages de qualité supérieure</li>
-            </ul>
-            <figure><img src="ImageVL.jpg" alt="Lait versé dans bidon"></figure>
-
-            <!-- Viandes -->
-            <h3>Viande d’exception</h3>
-            <ul>
-                <li>Tendreté exceptionnelle</li>
-                <li>Saveur riche et beurrée</li>
-                <li>Marbrage élevé</li>
-                <li>Qualité gustative constante</li>
-            </ul>
-            <figure><img src="ImageY.jpg" alt="Viande marbrée crue"></figure>
-            <figure><img src="ImageYP.jpg" alt="Viandes sur ardoise"></figure>
-
-            <!-- Volaille et œufs -->
-            <h3>Volaille et œufs frais</h3>
-            <ul>
-                <li>Fraîcheur quotidienne</li>
-                <li>Nutrition saine et équilibrée</li>
-                <li>Taille et poids réguliers</li>
-                <li>Œufs frais de qualité A</li>
-                <li>Œufs biologiques & Omega-3</li>
-                <li>Poulets de chair tendres</li>
-            </ul>
-            <figure><img src="ImageO.jpg" alt="Œufs fermiers"></figure>
-            <figure><img src="ImageC.jpg" alt="Poule rousse"></figure>
+        <!-- Texte à droite -->
+        <div class="product-text">
+          <p>Offrir des produits agricoles de la plus haute qualité...</p>
+          <ul>
+            <li>Qualité sans compromis</li>
+            <li>Innovation</li>
+            <li>Durabilité</li>
+            <li>Intégrité</li>
+            <li>Responsabilité sociale</li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Section Notre modèle -->
-    <section class="modele" id="modele">
-        <div class="container">
-            <h2 class="section-title">Notre modèle</h2>
-            <h3>Une ferme construite autour du contrôle qualité</h3>
-            <p>Chaque système que nous déployons — de la génétique à la transformation — poursuit un seul objectif : la qualité absolue.</p>
-            <ul>
-                <li>Intégration verticale : contrôle total de chaque étape, de la ferme au client.</li>
-                <li>Génétiques supérieures : importation directe de bétail laitier des Pays-Bas et sélection de races de viande à fort potentiel de marbrage.</li>
-                <li>Nutrition avancée : formules alimentaires de haute qualité, rigoureusement testées.</li>
-                <li>Infrastructures modernes : bâtiments climatisés, salles de traite et unités de transformation.</li>
-                <li>Contrôle rigoureux : analyses quotidiennes et traçabilité complète.</li>
-            </ul>
-            <h3>Nos installations</h3>
-            <ul>
-                <li>Installations laitières high-tech (salles de traite semi-automatiques)</li>
-                <li>Programmes de reproduction certifiés</li>
-                <li>Programmes de nutrition animale avancés</li>
-                <li>Bâtiments climatisés et hygiéniques</li>
-                <li>Logistique en chaîne froide</li>
-                <li>Centre vétérinaire intégré</li>
-            </ul>
-            <h3>Impact & engagement</h3>
-            <ul>
-                <li>Produits de qualité mondiale</li>
-                <li>Sécurité alimentaire renforcée</li>
-                <li>Exportations de produits premium</li>
-                <li>Création d’emplois et transfert de savoir-faire</li>
-                <li>Agriculture durable et respectueuse de l’environnement</li>
-            </ul>
-            <p><em>Notre ambition ultime : faire du Sénégal et de l’Afrique de l’Ouest des symboles d’excellence agroalimentaire.</em></p>
+  <!-- ===== Section Produits ===== -->
+  <section class="products" id="produits">
+    <div class="container">
+      <h2 class="section-title">Nos Produits</h2>
+
+      <!-- Sous-section Produits laitiers -->
+      <div class="product-block">
+        <figure>
+          <img src="ImageVL.jpg" alt="Lait versé dans bidon" />
+        </figure>
+        <div class="product-text">
+          <h3>Produits laitiers premium</h3>
+          <ul>
+            <li>Lait ultra-frais</li>
+            <li>Yaourt grec artisanal</li>
+            <li>Beurre & crème fermiers</li>
+            <li>Fromages de qualité supérieure</li>
+          </ul>
         </div>
-    </section>
+      </div>
 
-    <!-- Section Contact -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Contactez-Nous</h2>
-            <div class="contact-content">
-                <!-- Informations de contact -->
-                <div class="contact-info">
-                    <h3>Informations de Contact</h3>
-                    <p><strong>Adresse :</strong> Pointe E Immeuble X 9ième Étage Dakar, Sénégal</p>
-                    <p><strong>Téléphone :</strong> +221 78-868-9324</p>
-                    <p><strong>Email :</strong> Contact@farmagrovita.com</p>
-                </div>
+      <!-- Sous-section Viande avec deux images côte à côte -->
+      <div class="product-block">
+        <figure>
+          <img src="ImageY.jpg" alt="Viande marbrée crue" />
+        </figure>
+        <figure>
+          <img src="ImageYP.jpg" alt="Viandes sur ardoise" />
+        </figure>
+      </div>
+      <!-- Description sous les deux images -->
+      <div class="product-description center">
+        <h3>Viande d’exception</h3>
+        <ul>
+          <li>Tendreté exceptionnelle</li>
+          <li>Saveur riche et beurrée</li>
+          <li>Marbrage élevé</li>
+          <li>Qualité gustative constante</li>
+        </ul>
+      </div>
 
-                <!-- Formulaire de contact -->
-                <div class="contact-form">
-                    <h3>Envoyez-nous un Message</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nom</label>
-                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="Votre email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Sujet</label>
-                            <input type="text" id="subject" name="subject" placeholder="Sujet du message" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Envoyer le Message</button>
-                    </form>
-                </div>
+      <!-- Sous-section Volaille et œufs avec deux images côte à côte -->
+      <div class="product-block">
+        <figure>
+          <img src="ImageO.jpg" alt="Œufs fermiers" />
+        </figure>
+        <figure>
+          <img src="ImageC.jpg" alt="Poule rousse" />
+        </figure>
+      </div>
+      <!-- Description sous les deux images -->
+      <div class="product-description center">
+        <h3>Volaille et œufs frais</h3>
+        <ul>
+          <li>Fraîcheur quotidienne</li>
+          <li>Nutrition saine et équilibrée</li>
+          <li>Taille et poids réguliers</li>
+          <li>Œufs frais de qualité A</li>
+          <li>Œufs biologiques & Omega-3</li>
+          <li>Poulets de chair tendres</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Section Notre Modèle ===== -->
+  <section class="modele" id="modele">
+    <div class="container">
+      <h2 class="section-title">Notre modèle</h2>
+      <!-- Sous-titres et listes explicatives -->
+      <h3>Une ferme construite autour du contrôle qualité</h3>
+      <p>Chaque système que nous déployons — de la génétique à la transformation — poursuit un seul objectif : la qualité absolue.</p>
+      <ul>
+        <li>Intégration verticale</li>
+        <li>Génétiques supérieures</li>
+        <li>Nutrition avancée</li>
+        <li>Infrastructures modernes</li>
+        <li>Contrôle rigoureux</li>
+      </ul>
+
+      <h3>Nos installations</h3>
+      <ul>
+        <li>Installations laitières high-tech</li>
+        <li>Reproduction certifiée</li>
+        <li>Nutrition animale avancée</li>
+        <li>Bâtiments hygiéniques</li>
+        <li>Chaîne froide logistique</li>
+        <li>Centre vétérinaire intégré</li>
+      </ul>
+
+      <h3>Impact & engagement</h3>
+      <ul>
+        <li>Qualité mondiale</li>
+        <li>Sécurité alimentaire</li>
+        <li>Export premium</li>
+        <li>Création d’emplois</li>
+        <li>Agriculture durable</li>
+      </ul>
+
+      <p><em>Notre ambition ultime : faire du Sénégal un symbole d’excellence agroalimentaire.</em></p>
+    </div>
+  </section>
+
+  <!-- ===== Section Contact ===== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contactez-Nous</h2>
+      <div class="contact-content">
+        
+        <!-- Coordonnées -->
+        <div class="contact-info">
+          <h3>Informations de Contact</h3>
+          <p><strong>Adresse :</strong> Pointe E Immeuble X 9ième Étage Dakar, Sénégal</p>
+          <p><strong>Téléphone :</strong> +221 78-868-9324</p>
+          <p><strong>Email :</strong> Contact@farmagrovita.com</p>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="contact-form">
+          <h3>Envoyez-nous un Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Nom</label>
+              <input type="text" id="name" name="name" required />
             </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Sujet</label>
+              <input type="text" id="subject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Envoyer le Message</button>
+          </form>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Pied de page -->
-    <footer class="footer">
-        <p>&copy; 2025 Farm Agro Vita. Produire des produits de qualité supérieure — sans compromis.</p>
-    </footer>
+  <!-- ===== Pied de page ===== -->
+  <footer class="footer">
+    <p>&copy; 2025 Farm Agro Vita. Produire des produits de qualité supérieure — sans compromis.</p>
+  </footer>
 
-    <!-- Script JS si besoin -->
-    <script src="script.js"></script>
+  <!-- ===== Script pour effet flou du header au scroll ===== -->
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".header");
+      header.classList.toggle("scrolled", window.scrollY > 50);
+    });
+  </script>
 </body>
 </html>
