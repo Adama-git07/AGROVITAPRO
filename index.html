@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- ===== En-tête : barre de navigation ===== -->
+  <!-- ===== En-tête ===== -->
   <header class="header" id="header">
     <nav class="nav">
       <a href="#" class="logo">Farm Agro Vita</a>
@@ -37,7 +37,7 @@
     </div>
   </section>
 
-  <!-- ===== Section À propos ===== -->
+  <!-- ===== À propos ===== -->
   <section class="about" id="about">
     <div class="container">
       <h2 class="section-title">À propos de nous</h2>
@@ -50,7 +50,7 @@
     </div>
   </section>
 
-  <!-- ===== Section Mission ===== -->
+  <!-- ===== Mission ===== -->
   <section class="mission" id="mission">
     <div class="container">
       <h2 class="section-title">Notre Mission</h2>
@@ -70,7 +70,7 @@
     </div>
   </section>
 
-  <!-- ===== Section Produits ===== -->
+  <!-- ===== Produits ===== -->
   <section class="products" id="produits">
     <div class="container">
       <h2 class="section-title">Nos Produits</h2>
@@ -114,7 +114,7 @@
     </div>
   </section>
 
-  <!-- ===== Section Modèle ===== -->
+  <!-- ===== Modèle ===== -->
   <section class="modele" id="modele">
     <div class="container">
       <h2 class="section-title">Notre modèle</h2>
@@ -145,7 +145,7 @@
     </div>
   </section>
 
-  <!-- ===== Section Contact ===== -->
+  <!-- ===== Contact ===== -->
   <section class="contact" id="contact">
     <div class="container">
       <h2 class="section-title">Contactez-Nous</h2>
@@ -158,7 +158,7 @@
         </div>
         <div class="contact-form">
           <h3>Envoyez-nous un Message</h3>
-          <form id="contactForm">
+          <form id="contactForm" action="contact.php" method="POST">
             <div class="form-group">
               <label for="name">Nom</label>
               <input type="text" id="name" name="name" required />
@@ -193,5 +193,6 @@
       header.classList.toggle("scrolled", window.scrollY > 50);
     });
   </script>
+
 </body>
 </html>
