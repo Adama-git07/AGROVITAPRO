@@ -8,13 +8,17 @@
 </head>
 <body>
 
-  <!-- ===== En-tête ===== -->
-  <header class="header" id="header">
-    <nav class="nav">
-      <a href="#" class="logo">Farm Agro Vita</a>
-      <ul class="nav-links">
+  <!-- En-tête + navigation -->
+  <header class="entete" id="entete">
+    <nav class="menu">
+      <a href="#accueil" class="marque">
+        <img src="LogoFarm.jpg" alt="Logo Farm Agro Vita" class="logo" />
+        <span class="nom-site">Farm Agro Vita</span>
+      </a>
+
+      <ul class="liens">
         <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#about">À propos</a></li>
+        <li><a href="#apropos">À propos</a></li>
         <li><a href="#mission">Mission</a></li>
         <li><a href="#produits">Produits</a></li>
         <li><a href="#modele">Notre modèle</a></li>
@@ -23,24 +27,25 @@
     </nav>
   </header>
 
-  <!-- ===== Section Accueil ===== -->
-  <section class="hero" id="accueil">
-    <div class="video-banner">
+  <!-- Bande vidéo d'accueil -->
+  <section class="accueil" id="accueil">
+    <div class="fond-video">
       <video autoplay muted loop playsinline>
         <source src="Banniere-Farm-Agro-Vita.mp4" type="video/mp4" />
         Votre navigateur ne supporte pas la lecture de cette vidéo.
       </video>
     </div>
-    <div class="hero-content">
+
+    <div class="texte-accueil">
       <p>L’excellence au service de la qualité.</p>
-      <a href="#mission" class="cta-button">Découvrir Notre Mission</a>
+      <a href="#mission" class="bouton-cta">Découvrir Notre Mission</a>
     </div>
   </section>
 
-  <!-- ===== À propos ===== -->
-  <section class="about" id="about">
-    <div class="container">
-      <h2 class="section-title">À propos de nous</h2>
+  <!-- À propos -->
+  <section class="apropos" id="apropos">
+    <div class="conteneur">
+      <h2 class="titre-section">À propos de nous</h2>
       <p>Farm Agro Vita a été fondé avec un objectif clair : offrir des produits d’une qualité exceptionnelle...</p>
       <p>Sélection génétique supérieure et rigoureuse</p>
       <p>Importation directe de bétail des Pays-Bas</p>
@@ -50,15 +55,17 @@
     </div>
   </section>
 
-  <!-- ===== Mission ===== -->
+  <!-- Mission -->
   <section class="mission" id="mission">
-    <div class="container">
-      <h2 class="section-title">Notre Mission</h2>
-      <div class="product-block">
+    <div class="conteneur">
+      <h2 class="titre-section">Notre Mission</h2>
+
+      <div class="bloc-produit image-texte">
         <figure>
           <img src="ImageVachejpg.jpg" alt="Veau nourri par sa mère" />
         </figure>
-        <div class="product-text">
+
+        <div class="texte-produit">
           <p>Offrir des produits agricoles de la plus haute qualité...</p>
           <p>Qualité sans compromis</p>
           <p>Innovation</p>
@@ -70,27 +77,28 @@
     </div>
   </section>
 
-  <!-- ===== Produits ===== -->
-  <section class="products" id="produits">
-    <div class="container">
-      <h2 class="section-title">Nos Produits</h2>
+  <!-- Produits -->
+  <section class="produits" id="produits">
+    <div class="conteneur">
+      <h2 class="titre-section">Nos Produits</h2>
 
-      <div class="product-block">
-        <figure><img src="ImageVL.jpg" alt="Lait versé dans bidon" /></figure>
-        <div class="product-text">
+      <div class="bloc-produit">
+        <figure><img src="ImageVL.jpg" alt="Lait versé dans un bidon" /></figure>
+        <div class="texte-produit">
           <h3>Produits laitiers premium</h3>
           <p>Lait ultra-frais</p>
           <p>Yaourt grec artisanal</p>
-          <p>Beurre & crème fermiers</p>
+          <p>Beurre &amp; crème fermiers</p>
           <p>Fromages de qualité supérieure</p>
         </div>
       </div>
 
-      <div class="product-block">
+      <div class="bloc-produit">
         <figure><img src="ImageY.jpg" alt="Viande marbrée crue" /></figure>
         <figure><img src="ImageYP.jpg" alt="Viandes sur ardoise" /></figure>
       </div>
-      <div class="product-description center">
+
+      <div class="description-produit centre">
         <h3>Viande d’exception</h3>
         <p>Tendreté exceptionnelle</p>
         <p>Saveur riche et beurrée</p>
@@ -98,26 +106,28 @@
         <p>Qualité gustative constante</p>
       </div>
 
-      <div class="product-block">
+      <div class="bloc-produit">
         <figure><img src="ImageO.jpg" alt="Œufs fermiers" /></figure>
         <figure><img src="ImageC.jpg" alt="Poule rousse" /></figure>
       </div>
-      <div class="product-description center">
+
+      <div class="description-produit centre">
         <h3>Volaille et œufs frais</h3>
         <p>Fraîcheur quotidienne</p>
         <p>Nutrition saine et équilibrée</p>
         <p>Taille et poids réguliers</p>
         <p>Œufs frais de qualité A</p>
-        <p>Œufs biologiques & Omega-3</p>
+        <p>Œufs biologiques &amp; Oméga-3</p>
         <p>Poulets de chair tendres</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== Modèle ===== -->
+  <!-- Notre modèle -->
   <section class="modele" id="modele">
-    <div class="container">
-      <h2 class="section-title">Notre modèle</h2>
+    <div class="conteneur">
+      <h2 class="titre-section">Notre modèle</h2>
+
       <h3>Une ferme construite autour du contrôle qualité</h3>
       <p>Chaque système que nous déployons — de la génétique à la transformation — poursuit un seul objectif : la qualité absolue.</p>
       <p>Intégration verticale</p>
@@ -134,7 +144,7 @@
       <p>Chaîne froide logistique</p>
       <p>Centre vétérinaire intégré</p>
 
-      <h3>Impact & engagement</h3>
+      <h3>Impact &amp; engagement</h3>
       <p>Qualité mondiale</p>
       <p>Sécurité alimentaire</p>
       <p>Export premium</p>
@@ -145,52 +155,60 @@
     </div>
   </section>
 
-  <!-- ===== Contact ===== -->
+  <!-- Contact -->
   <section class="contact" id="contact">
-    <div class="container">
-      <h2 class="section-title">Contactez-Nous</h2>
-      <div class="contact-content">
-        <div class="contact-info">
-          <h3>Informations de Contact</h3>
+    <div class="conteneur">
+      <h2 class="titre-section">Contactez-nous</h2>
+
+      <div class="bloc-contact">
+        <div class="infos-contact">
+          <h3>Informations</h3>
           <p><strong>Adresse :</strong> Pointe E Immeuble X 9ième Étage Dakar, Sénégal</p>
           <p><strong>Téléphone :</strong> +221 78-868-9324</p>
           <p><strong>Email :</strong> Contact@farmagrovita.com</p>
         </div>
-        <div class="contact-form">
-          <h3>Envoyez-nous un Message</h3>
-          <form id="contactForm" action="contact.php" method="POST">
-            <div class="form-group">
-              <label for="name">Nom</label>
-              <input type="text" id="name" name="name" required />
+
+        <div class="formulaire-contact">
+          <h3>Envoyer un message</h3>
+
+          <form id="formContact" action="contact.php" method="POST">
+            <div class="champ">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="name" required />
             </div>
-            <div class="form-group">
+
+            <div class="champ">
               <label for="email">Email</label>
               <input type="email" id="email" name="email" required />
             </div>
-            <div class="form-group">
-              <label for="subject">Sujet</label>
-              <input type="text" id="subject" name="subject" required />
+
+            <div class="champ">
+              <label for="sujet">Sujet</label>
+              <input type="text" id="sujet" name="subject" required />
             </div>
-            <div class="form-group">
+
+            <div class="champ">
               <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
             </div>
-            <button type="submit" class="submit-btn">Envoyer le Message</button>
+
+            <button type="submit" class="bouton-envoyer">Envoyer</button>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Pied de page ===== -->
-  <footer class="footer">
+  <!-- Pied de page -->
+  <footer class="pied">
     <p>&copy; 2025 Farm Agro Vita. Produire des produits de qualité supérieure — sans compromis.</p>
   </footer>
 
+  <!-- Effet de couleur sur l'en-tête au défilement -->
   <script>
-    window.addEventListener("scroll", function () {
-      const header = document.querySelector(".header");
-      header.classList.toggle("scrolled", window.scrollY > 50);
+    window.addEventListener("scroll", () => {
+      const entete = document.querySelector(".entete");
+      entete.classList.toggle("defile", window.scrollY > 50);
     });
   </script>
 
