@@ -1,12 +1,14 @@
-/* ===== Réglages de base ===== */
+/* ===============================
+   STYLES GÉNÉRAUX
+================================ */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root{
-  /* Défilement doux + marge pour le menu collé en haut */
+  /* Défilement fluide + compensation d’ancre (header fixe) */
   scroll-behavior: smooth;
-  scroll-padding-top: 82px;
+  scroll-padding-top: 82px; /* ~ 72px header + petite marge */
 
-  /* Couleurs et petits effets */
+  /* Petites variables pour la finition (facultatives) */
   --green-dark: #00592e;
   --green: #0a7a4a;
   --green-soft: #aad5c1;
@@ -27,181 +29,272 @@ body{
 ul{ padding-left:1.5rem; margin:1rem 0 1.5rem; }
 h1,h2,h3{ color:var(--green-dark); }
 
-/* ===== En-tête (menu) ===== */
-.entete{
+/* ===============================
+   NAVIGATION
+================================ */
+.header{
   position:fixed; top:0; width:100%; height:72px;
   background:#fff;
-  transition:background-color .3s, box-shadow .3s, color .3s;
+  transition:background-color .3s ease, box-shadow .3s ease, color .3s ease;
   z-index:1000;
 }
-/* En-tête quand on a défilé la page */
-.entete.defile{
+.header.scrolled{
   background:var(--green-dark);
   box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
 
-/* Contenu du menu */
-.menu{
+.nav{
   display:flex; justify-content:space-between; align-items:center;
-  height:72px; max-width:1200px; margin:0 auto; padding:0 5% 0 2%;
+  height:72px;
+  max-width:1200px; margin:0 auto;
+  padding:0 5% 0 2%;
 }
 
-/* Logo + nom du site */
-.marque{ display:flex; align-items:center; gap:.6rem; color:var(--green-dark); text-decoration:none; }
-.marque:hover{ opacity:.9; }
-.logo{ height:54px; width:auto; margin-right:12px; display:block; object-fit:contain; }
-.nom-site{ font-weight:700; font-size:1.1rem; color:var(--green-dark); }
+.nav-left{
+  display:flex; align-items:center; gap:.6rem;
+  text-decoration:none; color:var(--green-dark);
+}
+.nav-left:hover{ opacity:.9; }
 
-/* Liens du menu */
-.liens{ display:flex; list-style:none; gap:1.5rem; }
-.liens a{
+.logo{ text-decoration:none; color:var(--green-dark); font-weight:700; }
+
+.logo-img{
+  height:54px;
+  width:auto;
+  margin-right:12px;
+  display:block;
+  object-fit:contain;
+}
+.site-name{ color:var(--green-dark); font-size:1.1rem; font-weight:700; }
+
+.nav-links{ display:flex; list-style:none; gap:1.5rem; }
+.nav-links a{
   color:var(--green-dark); text-decoration:none; font-weight:500; font-size:.95rem;
-  transition:color .3s, opacity .2s;
+  transition:color .3s ease, opacity .2s ease;
 }
-.liens a:hover{ color:var(--green); }
+.nav-links a:hover{ color:var(--green); }
 
-/* Couleurs des liens quand l’en-tête devient verte */
-.entete.defile .liens a{ color:#fff; }
-.entete.defile .liens a:hover{ color:var(--green-soft); }
-.entete.defile .nom-site, .entete.defile .marque{ color:#fff; }
+.header.scrolled .nav-links a{ color:#fff; }
+.header.scrolled .nav-links a:hover{ color:var(--green-soft); }
+.header.scrolled .site-name,
+.header.scrolled .nav-left,
+.header.scrolled .logo{ color:#fff; }
 
-/* Focus visible (clavier) */
-a:focus-visible, button:focus-visible { outline:2px solid var(--green-soft); outline-offset:2px; }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--green-soft);
+  outline-offset: 2px;
+}
 
-/* ===== Accueil (vidéo) ===== */
-.accueil{
+/* ===============================
+   ACCUEIL (VIDÉO DE FOND)
+================================ */
+.hero{
   position:relative; height:100vh; width:100%;
-  display:flex; align-items:center; justify-content:center; overflow:hidden;
+  overflow:hidden; display:flex; align-items:center; justify-content:center;
 }
-/* Vidéo plein écran */
-.fond-video{ position:absolute; inset:0; z-index:0; overflow:hidden; }
-.fond-video video{ width:100%; height:100%; object-fit:cover; display:block; }
-/* Voile sombre pour mieux lire le texte */
-.accueil::after{ content:""; position:absolute; inset:0; background:rgba(0,0,0,.25); z-index:1; }
-/* Texte sur la vidéo */
-.texte-accueil{ position:relative; z-index:2; text-align:center; color:#fff; padding:2rem; max-width:900px; }
-.texte-accueil p{ font-size:1.2rem; margin-bottom:1rem; }
-/* Bouton d’appel à l’action */
-.bouton-cta{
+
+.video-banner{
+  position:absolute; inset:0; z-index:0; overflow:hidden;
+}
+.video-banner video{
+  display:block;
+  width:100%; height:100%; object-fit:cover;
+}
+
+.hero::after{
+  content:""; position:absolute; inset:0; background:rgba(0,0,0,.25); z-index:1;
+}
+
+.hero-content{
+  position:relative; z-index:2; text-align:center; color:#fff;
+  padding:2rem; max-width:900px;
+}
+.hero p{ font-size:1.2rem; margin-bottom:1rem; }
+
+.cta-button{
   display:inline-block; background:#fff; color:var(--green-dark);
-  padding:1rem 2rem; border-radius:30px; font-weight:700; border:2px solid #fff; transition:all .3s;
+  padding:1rem 2rem; border-radius:30px; font-weight:700;
+  text-decoration:none; transition:all .3s ease; margin-top:1rem; border:2px solid #fff;
 }
-.bouton-cta:hover{ background:var(--green-soft); color:#003f20; border-color:var(--green-soft); }
+.cta-button:hover{ background:var(--green-soft); color:#003f20; border-color:var(--green-soft); }
 
-/* ===== Gabarit des sections ===== */
-.conteneur{ max-width:1200px; margin:0 auto; padding:1rem 5%; text-align:center; }
+/* ===============================
+   CONTAINERS & SECTIONS
+================================ */
+.container{ max-width:1200px; margin:0 auto; padding:1rem 5%; text-align:center; }
 
-/* Titre des sections (trait dessous) */
-.titre-section{
+.section-title{
   text-align:center; font-size:2.5rem; color:var(--green-dark);
-  margin:.5rem 0 .6rem; position:relative;
+  margin:.5rem 0 .6rem;
+  position:relative;
 }
-.titre-section::after{
+.section-title::after{
   content:""; position:absolute; bottom:-6px; left:50%; transform:translateX(-50%);
   width:60px; height:3px; background:var(--green-dark);
 }
 
-/* Marges verticales des sections + ancre pour le menu fixe */
-.apropos,.mission,.produits,.modele,.contact{ background:#fff; padding:.45rem 0; scroll-margin-top:82px; }
+.about,.mission,.products,.modele,.contact{
+  background:#fff;
+  padding:.45rem 0;
+  scroll-margin-top:82px;
+}
 
-/* Ligne grise discrète entre les sections */
-.apropos::before, .mission::before, .produits::before, .modele::before, .contact::before{
-  content:""; display:block; height:1px; width:min(1100px, 92%);
+/* Séparateurs discrets entre sections */
+.about::before,
+.mission::before,
+.products::before,
+.modele::before,
+.contact::before{
+  content:"";
+  display:block;
+  height:1px;
+  width:min(1100px, 92%);
   margin:0.75rem auto 0.25rem;
   background:linear-gradient(90deg, transparent, var(--divider) 20%, var(--divider) 80%, transparent);
   opacity:.8;
 }
 
-/* Sous-titres dans certaines sections */
-.produits h3, .modele h3{ margin-top:.6rem; margin-bottom:.4rem; color:var(--green-dark); }
-
-/* ===== Section À propos (texte simple, centré) ===== */
-.apropos{ min-height:auto; display:block; }
-.apropos .conteneur{
-  display:block; max-width:900px; margin:0 auto;
-  padding-top:.6rem; padding-bottom:.6rem; text-align:center;
-}
-.apropos .titre-section{ margin:.4rem 0 .5rem; }
-.apropos .titre-section + p{ margin-top:.6rem; }
-.apropos p{ margin:.25rem 0; color:var(--muted); }
-
-/* ===== Images + texte côte à côte (Mission / Produits) ===== */
-.bloc-produit{
-  display:flex; flex-wrap:wrap; gap:2rem; margin:.8rem 0;
-  justify-content:center; align-items:stretch; /* mêmes hauteurs */
-}
-/* Variante grille (image + texte) */
-.bloc-produit.image-texte{
-  display:grid; grid-template-columns:minmax(320px,1fr) minmax(320px,1fr);
-  align-items:stretch; gap:2rem;
-}
-.bloc-produit.image-texte > *{ align-self:stretch; }
-
-/* Colonne texte centrée verticalement */
-.texte-produit{
-  flex:1; min-width:280px; display:flex; flex-direction:column; justify-content:center;
-  text-align:left; height:100%; color:var(--text);
+.products h3,.modele h3{
+  margin-top:.6rem;
+  margin-bottom:.4rem;
+  color:var(--green-dark);
 }
 
-/* Images des produits */
-.bloc-produit figure{ flex:1 1 300px; margin:0; }
-.bloc-produit img{
-  width:100%; max-height:400px; object-fit:cover;
-  border-radius:var(--radius); box-shadow:var(--shadow-sm); transition:transform .35s;
+/* ===============================
+   À PROPOS — placement harmonisé
+   (pas de centrage vertical ni grande hauteur)
+================================ */
+.about{
+  min-height:auto;               /* supprime le grand bloc 70vh */
+  display:block;                 /* pas de flex sur la section */
 }
-.bloc-produit img:hover{ transform:scale(1.01); }
+.about .container{
+  display:block;                 /* pas de flex ici non plus */
+  max-width:900px;               /* lecture confortable pour un texte */
+  margin:0 auto;
+  padding-top:.6rem;
+  padding-bottom:.6rem;
+  text-align:center;
+}
+.about .section-title{ margin:.4rem 0 .5rem; }
+.about .section-title + p{ margin-top:.6rem; }
+.about p{ margin:.25rem 0; color:var(--muted); }
 
-/* Texte centré sous les groupes d’images */
-.description-produit{ text-align:center; margin-top:.8rem; }
-.centre{ text-align:center; }
+/* ===============================
+   IMAGE + TEXTE (Mission / Produits)
+   Centrage vertical du texte à côté des images
+================================ */
+.product-block{
+  display:flex;
+  flex-wrap:wrap;
+  gap:2rem;
+  margin:.8rem 0;
+  justify-content:center;
+  align-items:stretch;                     /* colonnes à même hauteur */
+}
 
-/* ===== Contact ===== */
-.bloc-contact{
+.product-block.image-text-row{
+  display:grid;
+  grid-template-columns:minmax(320px,1fr) minmax(320px,1fr);
+  align-items:stretch;
+  gap:2rem;
+}
+.product-block.image-text-row > *{ align-self:stretch; }
+
+.product-text{
+  flex:1;
+  min-width:280px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;                 /* centrage vertical du texte */
+  text-align:left;
+  height:100%;
+  color: var(--text);
+}
+
+.product-block figure{ flex:1 1 300px; margin:0; }
+.product-block img{
+  width:100%;
+  max-height:400px;
+  object-fit:cover;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  transition: transform .35s ease;
+}
+.product-block img:hover{ transform: scale(1.01); }
+
+.product-description{ text-align:center; margin-top:.8rem; }
+.product-description ul{ padding-left:1.5rem; margin:.5rem 0 1.2rem; }
+
+/* ===============================
+   CONTACT
+================================ */
+.contact-content{
   display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:2rem; margin-top:1.2rem;
 }
-.formulaire-contact{
+.contact-form{
   background:#fff; padding:1.5rem; border-radius:var(--radius); border:1px solid #ccc;
-  box-shadow:var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
 }
-.champ{ margin-bottom:1rem; }
-.champ label{ display:block; margin-bottom:.5rem; font-weight:700; color:var(--green-dark); }
-.champ input, .champ textarea{
+.form-group{ margin-bottom:1rem; }
+.form-group label{ display:block; margin-bottom:.5rem; font-weight:700; color:var(--green-dark); }
+.form-group input,.form-group textarea{
   width:100%; padding:.8rem; border:1px solid #ccc; border-radius:6px;
   background:#fefefe; font-size:1rem; color:var(--text);
 }
-.champ textarea{ height:120px; resize:vertical; }
+.form-group textarea{ height:120px; resize:vertical; }
 
-.bouton-envoyer{
+.submit-btn{
   background:var(--green-dark); color:#fff; padding:1rem 2rem; border:none; border-radius:25px;
-  font-size:1rem; font-weight:700; cursor:pointer; transition:all .3s;
+  font-size:1rem; font-weight:700; cursor:pointer; transition:all .3s ease;
 }
-.bouton-envoyer:hover{ background:#004020; }
+.submit-btn:hover{ background:#004020; }
 
-/* ===== Pied de page ===== */
-.pied{ background:var(--green-dark); color:#fff; text-align:center; padding:1.5rem 5%; font-size:.9rem; }
+/* ===============================
+   PIED DE PAGE
+================================ */
+.footer{
+  background:var(--green-dark); color:#fff; text-align:center;
+  padding:1.5rem 5%; font-size:.9rem;
+}
 
-/* ===== Mobile (≤ 768px) ===== */
+/* ===============================
+   RESPONSIVE
+================================ */
 @media (max-width: 768px){
-  .liens{ display:none; }
-  .menu{ padding:0 4%; height:60px; }
-  .entete{ height:60px; }
-  .logo{ height:44px; }
-  .nom-site{ font-size:1rem; }
+  .nav-links{ display:none; }
+  .nav{ padding:0 4%; height:60px; }
+  .header{ height:60px; }
+  .logo-img{ height:44px; }
+  .site-name{ font-size:1rem; }
 
   :root{ scroll-padding-top:68px; }
 
-  .texte-accueil p{ font-size:1rem; }
+  .hero p{ font-size:1rem; }
 
-  .apropos .conteneur{ padding:.8rem 5%; }
+  /* À propos : section compacte en mobile */
+  .about .container{ padding:.8rem 5%; }
 
-  .bloc-produit{ flex-direction:column; align-items:center; }
-  .bloc-produit.image-texte{ grid-template-columns:1fr; gap:1rem; }
+  .product-block{
+    flex-direction:column;
+    align-items:center;
+  }
 
-  .texte-produit{ align-items:center; text-align:center; height:auto; }
+  .product-block.image-text-row{
+    display:grid; grid-template-columns:1fr; align-items:center; gap:1rem;
+  }
 
-  .image-texte img, .bloc-produit img{ width:100%; max-height:260px; object-fit:cover; }
+  .product-text{
+    align-items:center;
+    text-align:center;
+    height:auto;
+  }
 
-  .conteneur{ padding:.8rem 5%; }
-  .titre-section{ font-size:2rem; margin:.8rem 0; }
+  .image-text-row img,.product-block img{
+    width:100%; max-height:260px; object-fit:cover;
+  }
+
+  .container{ padding:.8rem 5%; }
+  .section-title{ font-size:2rem; margin:.8rem 0; }
 }
